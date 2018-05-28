@@ -38,11 +38,11 @@ $ perl user_installed_path/ERVcaller.pl -i sample_ID -f .bam -S -r -g -w 5000
 3.3. Parameters
 List of parameters and explanation
 Parameter	Full name	Description
--i	input_sampleID	Sample ID (required)
--h	help	Print this help
--t	threads	The number of threads (default: 1)
--f	file_suffix	The suffix of the input data (default: .fq.gz)
--d	data_type	Data type, including WGS, and RNA-seq (default: WGS)
+-i	input_sampleID	Sample ID (required)\n
+-h	help	Print this help\n
+-t	threads	The number of threads (default: 1)\n
+-f	file_suffix	The suffix of the input data (default: .fq.gz)\n
+-d	data_type	Data type, including WGS, and RNA-seq (default: WGS)\n
 -s	sequencing_type	Type of sequencing data, including paired-end, and single-end (default: paired-end)
 -H	Human_reference_genome	The FASTA file of the human reference genome
 -T	TE_reference_genomes	The TE library (FASTA) used for screening
