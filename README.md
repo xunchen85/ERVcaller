@@ -40,7 +40,6 @@ More examples of ERVcaller running command lines are shown in the help page.
 All available parameters are listed below. Four parameters are required, including input_sampleID (-i), file_suffix (-f), Human_reference_genome (-H), and TE_reference_genomes (-T).
 
 Parameter	Full name	Description
-
 -i	input_sampleID	Sample ID (required)
 
 -h	help	Print this help
