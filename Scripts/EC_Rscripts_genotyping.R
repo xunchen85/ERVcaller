@@ -5,7 +5,7 @@
   dat <- read.delim(file = filename, header = FALSE,sep="")
   dat <- subset(dat,dat[,2]>0)
   list <- read.delim(file = filename2, header = TRUE,sep="")
-  Quantile<-quantile(dat[,2]/2,0.05)
+  Quantile<-quantile(dat[,2]/2,0.1)
   Quantile<-data.frame(Quantile)
   list[,4]<-Quantile$Quantile
   list$SD<-sd(dat[,2]/2)

@@ -22,8 +22,9 @@ while(<F1>){
 my @read_name=keys %read;
 for(my $i=0;$i<@read_name;$i++){
 # print "@{$read{$read_name[$i]}}\n";
- if((${$read{$read_name[$i]}}[0] > ${$read{$read_name[$i]}}[1]+20) && (${$read{$read_name[$i]}}[3] > ${$read{$read_name[$i]}}[4]+20)){next;}    #### need to updated
- elsif((${$read{$read_name[$i]}}[0] - ${$read{$read_name[$i]}}[1] <=20) && (${$read{$read_name[$i]}}[3] - ${$read{$read_name[$i]}}[4]>20)){  #### updated to use AS - XS >=20
+ if((${$read{$read_name[$i]}}[0] > ${$read{$read_name[$i]}}[1]+20) && (${$read{$read_name[$i]}}[3] > ${$read{$read_name[$i]}}[4]+20)){
+  next;
+ } elsif((${$read{$read_name[$i]}}[0] - ${$read{$read_name[$i]}}[1] <=20) && (${$read{$read_name[$i]}}[3] - ${$read{$read_name[$i]}}[4]>20)){  #### updated to use AS - XS >=20
    print "$read_name[$i] L ${$read{$read_name[$i]}}[3] ${$read{$read_name[$i]}}[4] ${$read{$read_name[$i]}}[5]\n";}
  elsif((${$read{$read_name[$i]}}[0] - ${$read{$read_name[$i]}}[1] >20) && (${$read{$read_name[$i]}}[3] - ${$read{$read_name[$i]}}[4]<=20)){
   print "$read_name[$i] R ${$read{$read_name[$i]}}[0] ${$read{$read_name[$i]}}[1] ${$read{$read_name[$i]}}[2]\n";}
