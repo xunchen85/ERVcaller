@@ -42,27 +42,15 @@ All available parameters are listed below. Four parameters are required, includi
 Parameter	Full name	Description
 
 -i	input_sampleID	Sample ID (required)
-
 -h	help	Print this help
-
 -t	threads	The number of threads (default: 1)
-
 -f	file_suffix	The suffix of the input data (required; default: .fq.gz)
-
 -d	data_type	Data type, including WGS, and RNA-seq (default: WGS)
-
 -s	sequencing_type	Type of sequencing data, including paired-end, and single-end (default: paired-end)
-
 -H	Human_reference_genome	The FASTA file of the human reference genome (required)
-
 -T	TE_reference_genomes	The TE library (FASTA) used for screening (required)
-
 -l	length_insertsize	Insert size length (bp) (default: 500)
-
 -S	Split	Is the split reads used for detection
-
 -V	Validation	Validation function (input bam file need to be indexed)
-
 -G	Genotyping	Genotyping function (input bam file need to be indexed)
-
 -w	window_size	Window size of selected genomic locations for genotyping (bp) (default: 10,000)
