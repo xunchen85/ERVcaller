@@ -9,7 +9,7 @@ my %split=();
 my %split3=();
 my %split2=();
 
-##########################  Cellular_proportion.results
+##########################
 open BP,"$ARGV[0]";            
 #open BP2, ">>$ARGV[0].bp2-2";
 while(<BP>){
@@ -178,20 +178,20 @@ for(my $i=0;$i<@reads;$i++){
   }                  ##### 1. here counting number of reads support Non-VI;
                            }
 
-######################### number of chimeric and split reads and cellular proportion of the VI;
+############ number of chimeric and split reads and ratio of the TE;
  
 my $name=$ARGV[1]."_".$ARGV[2]."_".$ARGV[3];                     # sample_id, chr, position
  unless(exists($split2{$name})){$split2{$name}=0;}                # if there is no split reads
  unless(exists($split3{$name})){$split3{$name}=0;}                # if there is no suggestive reads
- unless($vi{$name}){@{$vi{$name}}=(0) x 3;${$vi{$name}}[2]=1;}    # 0. if there is no reads support non-VI
+ unless($vi{$name}){@{$vi{$name}}=(0) x 3;${$vi{$name}}[2]=1;}    # 0. if there is no reads support non-TE
 
 ############ array structure
  ${$vi{$name}}[1]=$ARGV[4];                                       # 1. chimeric & split reads 
  ${$vi{$name}}[3]=$split3{$name};                                 # 3. suggestive reads (split reads <20 bp)
- if(${$vi{$name}}[0] eq 0){                                       # if there is no reads support nonVIs
+ if(${$vi{$name}}[0] eq 0){                                       # if there is no reads support nonTEs
   ${$vi{$name}}[2]=1;
  }
-############ cellular proportion calculation
+############ calculation
  elsif(${$vi{$name}}[0] >0 && ${$vi{$name}}[1]>0){
   if($ARGV[5] eq 2) {
    ${$vi{$name}}[2]=(${$vi{$name}}[1]/2)/((${$vi{$name}}[1]/2)+${$vi{$name}}[0]);
@@ -202,6 +202,6 @@ my $name=$ARGV[1]."_".$ARGV[2]."_".$ARGV[3];                     # sample_id, ch
  }
 
 ############ formating the results
-print "ID_Chr_Position No._reads_support_nonVI No._reads_support_VI Allele_Fraction Suggestive_reads_(split_reads_<20bp)\n";
+print "ID_Chr_Position No._reads_support_nonTE No._reads_support_TE Allele_Fraction Suggestive_reads_(split_reads_<20bp)\n";
 print "$name @{$vi{$name}}\n";                  # print out each VI
 

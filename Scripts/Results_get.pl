@@ -44,6 +44,7 @@ push(@VIP,[@line,$line[3]+$line[9],$line[3]+$line[5]+$line[9]+$line[11],($line[2
  else{push(@VIP,[@line,$line[3]+$line[9],$line[3]+$line[5]+$line[9]+$line[11],0,0,$type,$group]);}
  
                              }
+# print "@VIP\n";
  if(eof(F1) || $group ne $group_keep){                                #### if it is next VIP region;
 
 ################## How to pick candidate and summarize the results;
@@ -57,7 +58,10 @@ push(@VIP,[@line,$line[3]+$line[9],$line[3]+$line[5]+$line[9]+$line[11],($line[2
    my $name=$VIP_sort[$i][30]."_".$VIP_sort[$i][34];
    if(exists($viruses{$name})){
     if($VIP_sort[$i][35] eq ${$viruses{$name}}[35]){
-     if($VIP_sort[$i][38]==${$viruses{$name}}[38] && $VIP_sort[$i][40]>=${$viruses{$name}}[40]){     
+     if($VIP_sort[$i][38]==${$viruses{$name}}[38] && $VIP_sort[$i][39]>=${$viruses{$name}}[39]){
+      @{$viruses{$name}}=@{$VIP_sort[$i]};
+     }
+     elsif($VIP_sort[$i][38]==${$viruses{$name}}[38] && $VIP_sort[$i][40]>=${$viruses{$name}}[40]){     
       if((abs(${$viruses{$name}}[9]- ${$viruses{$name}}[3]) > abs($VIP_sort[$i][9]-$VIP_sort[$i][3])) || ($VIP_sort[$i][9]>0 && $VIP_sort[$i][12]>$VIP_sort[$i][7]) || ($VIP_sort[$i][40]>${$viruses{$name}}[40] && ${$viruses{$name}}[9]+${$viruses{$name}}[11]==0)){@{$viruses{$name}}=@{$VIP_sort[$i]};}
                                                                                                }
                                                    }
@@ -77,7 +81,10 @@ push(@VIP,[@line,$line[3]+$line[9],$line[3]+$line[5]+$line[9]+$line[11],($line[2
    my $name=$VIP_sort2[$i][43];
    if(exists($viruses2{$name})){
     if($VIP_sort2[$i][35] eq ${$viruses2{$name}}[35]){
-     if($VIP_sort2[$i][38]==${$viruses2{$name}}[38] && $VIP_sort2[$i][40]>=${$viruses2{$name}}[40]){
+     if($VIP_sort[$i][38]==${$viruses{$name}}[38] && $VIP_sort[$i][39]>=${$viruses{$name}}[39]){
+      @{$viruses{$name}}=@{$VIP_sort[$i]};
+     }
+     elsif($VIP_sort2[$i][38]==${$viruses2{$name}}[38] && $VIP_sort2[$i][40]>=${$viruses2{$name}}[40]){
       if((abs(${$viruses2{$name}}[9] - ${$viruses2{$name}}[3]) > abs($VIP_sort2[$i][9]-$VIP_sort2[$i][3])) || ($VIP_sort2[$i][9]>0 && $VIP_sort2[$i][12]>$VIP_sort2[$i][7]) || ($VIP_sort2[$i][40]>${$viruses2{$name}}[40]&& ${$viruses2{$name}}[9]+${$viruses2{$name}}[11]==0)){@{$viruses2{$name}}=@{$VIP_sort2[$i]};}
                                                                                                    }
                                                      }

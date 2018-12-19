@@ -47,31 +47,31 @@ while(<FILE>){
   @virus_p=split;
      $virus_p[4]=~s/Chr//;
      $virus_p[4]=~s/chr//;
-     if($virus_p[4] eq "1")    {print C1 "@virus_p\n";}
-     elsif($virus_p[4] eq "2") {print C2 "@virus_p\n";}
-     elsif($virus_p[4] eq "3") {print C3 "@virus_p\n";}
-     elsif($virus_p[4] eq "4") {print C4 "@virus_p\n";}
-     elsif($virus_p[4] eq "5") {print C5 "@virus_p\n";}
-     elsif($virus_p[4] eq "6") {print C6 "@virus_p\n";}
-     elsif($virus_p[4] eq "7") {print C7 "@virus_p\n";}
-     elsif($virus_p[4] eq "8") {print C8 "@virus_p\n";}
-     elsif($virus_p[4] eq "9") {print C9 "@virus_p\n";}
-     elsif($virus_p[4] eq "10") {print C10 "@virus_p\n";}
-     elsif($virus_p[4] eq "11") {print C11 "@virus_p\n";}
-     elsif($virus_p[4] eq "12") {print C12 "@virus_p\n";}
-     elsif($virus_p[4] eq "13") {print C13 "@virus_p\n";}
-     elsif($virus_p[4] eq "14") {print C14 "@virus_p\n";}
-     elsif($virus_p[4] eq "15") {print C15 "@virus_p\n";}
-     elsif($virus_p[4] eq "16") {print C16 "@virus_p\n";}
-     elsif($virus_p[4] eq "17") {print C17 "@virus_p\n";}
-     elsif($virus_p[4] eq "18") {print C18 "@virus_p\n";}
-     elsif($virus_p[4] eq "19") {print C19 "@virus_p\n";}
-     elsif($virus_p[4] eq "20") {print C20 "@virus_p\n";}
-     elsif($virus_p[4] eq "21") {print C21 "@virus_p\n";}
-     elsif($virus_p[4] eq "22") {print C22 "@virus_p\n";}
-     elsif($virus_p[4] eq "X")  {print CX "@virus_p\n";}
-     elsif($virus_p[4] eq "Y")  {print CY "@virus_p\n";}
-     elsif($virus_p[4] eq "MT") {print CMT "@virus_p\n";}
+     if($virus_p[4] eq "1" || $virus_p[4] eq "NC_000001.10")    {print C1 "@virus_p\n";}
+     elsif($virus_p[4] eq "2" || $virus_p[4] eq "NC_000002.11") {print C2 "@virus_p\n";}
+     elsif($virus_p[4] eq "3" || $virus_p[4] eq "NC_000003.11") {print C3 "@virus_p\n";}
+     elsif($virus_p[4] eq "4" || $virus_p[4] eq "NC_000004.11") {print C4 "@virus_p\n";}
+     elsif($virus_p[4] eq "5" || $virus_p[4] eq "NC_000005.9") {print C5 "@virus_p\n";}
+     elsif($virus_p[4] eq "6" || $virus_p[4] eq "NC_000006.11") {print C6 "@virus_p\n";}
+     elsif($virus_p[4] eq "7" || $virus_p[4] eq "NC_000007.13") {print C7 "@virus_p\n";}
+     elsif($virus_p[4] eq "8" || $virus_p[4] eq "NC_000008.10") {print C8 "@virus_p\n";}
+     elsif($virus_p[4] eq "9" || $virus_p[4] eq "NC_000009.11") {print C9 "@virus_p\n";}
+     elsif($virus_p[4] eq "10" || $virus_p[4] eq "NC_0000010.10") {print C10 "@virus_p\n";}
+     elsif($virus_p[4] eq "11" || $virus_p[4] eq "NC_000011.9") {print C11 "@virus_p\n";}
+     elsif($virus_p[4] eq "12" || $virus_p[4] eq "NC_000012.11") {print C12 "@virus_p\n";}
+     elsif($virus_p[4] eq "13" || $virus_p[4] eq "NC_000013.10") {print C13 "@virus_p\n";}
+     elsif($virus_p[4] eq "14" || $virus_p[4] eq "NC_000014.8") {print C14 "@virus_p\n";}
+     elsif($virus_p[4] eq "15" || $virus_p[4] eq "NC_000015.9") {print C15 "@virus_p\n";}
+     elsif($virus_p[4] eq "16" || $virus_p[4] eq "NC_000016.9") {print C16 "@virus_p\n";}
+     elsif($virus_p[4] eq "17" || $virus_p[4] eq "NC_000017.10") {print C17 "@virus_p\n";}
+     elsif($virus_p[4] eq "18" || $virus_p[4] eq "NC_000018.9") {print C18 "@virus_p\n";}
+     elsif($virus_p[4] eq "19" || $virus_p[4] eq "NC_000019.9") {print C19 "@virus_p\n";}
+     elsif($virus_p[4] eq "20" || $virus_p[4] eq "NC_000020.10") {print C20 "@virus_p\n";}
+     elsif($virus_p[4] eq "21" || $virus_p[4] eq "NC_000021.8") {print C21 "@virus_p\n";}
+     elsif($virus_p[4] eq "22" || $virus_p[4] eq "NC_000022.10") {print C22 "@virus_p\n";}
+     elsif($virus_p[4] eq "X" || $virus_p[4] eq "NC_000023.10")  {print CX "@virus_p\n";}
+     elsif($virus_p[4] eq "Y" || $virus_p[4] eq "NC_000024.9")  {print CY "@virus_p\n";}
+     elsif($virus_p[4] eq "MT" || $virus_p[4] eq "NC_012920.1") {print CMT "@virus_p\n";}
              }
  open OUT, ">$output";
    seek(C1,0,0);

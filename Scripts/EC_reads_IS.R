@@ -2,6 +2,7 @@
  args <- commandArgs(trailingOnly = TRUE)
  filename <- args[1]
   dat <- read.delim(file = filename, header = FALSE,sep="")
+  dat <-dat[-1,]
   insert_size <- dat
   insert_size <- abs(subset(insert_size,insert_size[,1]=="P")[,13])
   Quantile<-quantile(insert_size,0.1)

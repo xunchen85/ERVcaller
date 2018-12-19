@@ -17,9 +17,14 @@ system ("sort -k 2 -k 3 -k 4 -k 5 $ARGV[0] |uniq | sort -k 2 >$ARGV[0]_2");
 ##################### Average Insert size;
 
 open CANDIDATE,"$ARGV[0]_2";
+
+my @tmp1 = (0) x 26;
+print "@tmp1\n";
 #####################
-while(<CANDIDATE>){
- @line=split;
+while(my $tmp1=<CANDIDATE>){
+ $tmp1=~s/\n$//;
+ chomp ($tmp1);
+ @line=split /\s+/, $tmp1;
  if($line[2] / 512>=1){next;}
  $line[5]=$line[3];
  my $name2=$line[1]."_".$line[3]."_".$line[8];

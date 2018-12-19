@@ -25,6 +25,7 @@ my $unique_gi=0;
 my $average_gi=0;
 my $average_unique=0;
 my $average_all=0;
+my $checkpoint=0;
 
 open FILE,"$ARGV[0]";
 ############ Descriptions: 1. average score this one; 2. average score for unique reads; 3. unique reads virus; 4. unique reads vip; 4. unique reads gi; 5. cguneruc number; 6. chimeric quality; 7. split reads number; 8. split reads quality; 9. total reads each vip; 10. total hits each gi; 11. total reads each gi;
@@ -33,12 +34,10 @@ print "aver_a\taver_u\tu_virus\tu_vip\tuniq_gi\tchim\tchim_q\tsplit\tsplit_q\tt_
 while(<FILE>){                # while1 start;
  my @line=split;
  $name2=$line[4]."|".$line[5]."|".$line[6];
-
 #######################
  if($name1 eq $name2 || !($name1)){              ### the same vip;
   $name1=$name2;
   push(@{$vip{$name1}},[@line]);
-
 ######################
   my @temp2=split /\|/, $line[3];
   for(my $i=0;$i<@temp2;$i+=2){
@@ -127,6 +126,7 @@ LAST1:  my @temp1=@{$vip{$name1}};
     if($all_vip{$temp2[$i]}<$temp2[$i+1]){$all_vip{$temp2[$i]}=$temp2[$i+1];}
                                    }
     else{$all_vip{$temp2[$i]}=$temp2[$i+1];}
+   if (eof(FILE) && $checkpoint eq 0){$checkpoint=1;goto LAST1;}
                               }
                         }         # different vip end
              }                # while1 end;

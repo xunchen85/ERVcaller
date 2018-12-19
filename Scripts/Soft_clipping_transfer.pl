@@ -28,7 +28,7 @@ while(<FILE>){
    if($line[$i]=~s/MD:Z://){$md=$line[$i];}
    if($line[$i]=~s/AS:i://){$as=$line[$i];}
                              }
-   if($as<20){next;}
+   if($as eq "NA" || $as<20){next;}
     print OUTPUT "S1 unknown @name[1..11] @line[1..8] $md $as\n";
                         }
               }

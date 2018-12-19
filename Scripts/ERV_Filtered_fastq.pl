@@ -12,7 +12,7 @@ my $fasta_title="";
 my $directory3=$ARGV[2];
 
 #################
-open INTEGRATION,"$ARGV[0]_ERV.integration";            #### ERV.integration file
+open INTEGRATION,"$ARGV[0]_ERV_breakpoint";            #### ERV.integration file
 while(<INTEGRATION>){
  @line=split;
  if(exists($integration{$line[2]})){next;}
