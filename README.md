@@ -9,12 +9,13 @@ $ tar vxzf ERVcaller_v.1.3.tar.gz
 
 2.2 Installing dependent software
 Users need to successfully install the following software separately and make them available in the default search path (such as by using the Linux command “export” or adding them to your .bashrc).
-•	BWA-0.7.10: http://bio-bwa.sourceforge.net/bwa.shtml 
-•	Bowtie2: http://bowtie-bio.sourceforge.net/bowtie2/manual.shtml 
-•	Samtools-1.6 (or later than 1.2): http://www.htslib.org/doc/samtools.html 
-•	Hydra-0.5.3: http://www.mybiosoftware.com/hydra-0-5-3-structural-variation-discovery-paired-end-mapping.html 
-•	 R-3.3.2 (or higher): https://www.r-project.org/
-•	SE_MEI (Modified version included in the Scripts folder of the ERVcaller installer)
+
+BWA-0.7.10: http://bio-bwa.sourceforge.net/bwa.shtml
+Bowtie2: http://bowtie-bio.sourceforge.net/bowtie2/manual.shtml 
+Samtools-1.6 (or later than 1.2): http://www.htslib.org/doc/samtools.html 
+Hydra-0.5.3: http://www.mybiosoftware.com/hydra-0-5-3-structural-variation-discovery-paired-end-mapping.html
+R-3.3.2 (or higher): https://www.r-project.org/
+SE_MEI (Modified version included in the Scripts folder of the ERVcaller installer)
 
 2.3 Preparing the references
 2.3.1 Human reference genome (hg38 by default. If BAM file(s) are used as input, the same build as the reference used for alignment should be used)
