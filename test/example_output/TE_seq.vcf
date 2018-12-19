@@ -1,0 +1,15 @@
+##fileformat=VCFv4.2
+##fileDate=20181114
+##source=ERVcaller_v1.3
+##reference=file:hg38.fa
+##ALT=<ID=INS:MEI:HERVK,Description="HERVK insertion">
+##INFO=<ID=TSD,Number=2,Type=String,Description="NUCLEOTIDE,LEN, Nucleotides and length of the Target Site Duplication (NULL for unknown)">
+##INFO=<ID=INFOR,Number=6,Type=String,Description="NAME,START,END,LEN,DIRECTION,STATUS; "NA" for unknown values. Status of detected TE: 0 = Inconsistent direction for the supporting reads; 1 = One breakpoint detected by only chimeric and/or improper reads without split reads; 2 = Only one breakpoint is detected and covered by split reads; 3 = Two breakpoints detected, and both of them are not covered by split reads; 4 = Two breakpoints detected, and one of them are not covered by split reads; 5 = Two breakpoints detected, and both of them are covered by split reads;">
+##INFO=<ID=DR,Number=1,Type=Integer,Description="Number of reads support the TE insertion">
+##INFO=<ID=SR,Number=1,Type=String,Description="Number of split reads support TE insertion and the breakpoint">
+##INFO=<ID=GTF,Number=1,Type=String,Description="If the detected TE insertions genotyped">
+##INFO=<ID=NTEDR,Number=1,Type=Integer,Description="The number of reads support non TE insertions">
+##INFO=<ID=GR,Number=1,Type=Float,Description="The ratio of the number of reads support TE insertions versus the total number of reads at this TE insertion location">
+##FORMAT=<ID=GT,Number=1,Type=String,Description="Genotype">
+#CHROM	POS	ID	REF	ALT	QUAL	FILTER	INFO	FORMAT	TE_seq
+1	5617380	.	.	<INS_MEI:HERV>	.	.	TSD=NULL,NA;INFOR=HERVK,1,7831,7831,+,4;DR=64;SR=2;GTF=YES;NTEDR=2;GR=0.971	GT	1/1
