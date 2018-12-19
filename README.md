@@ -4,6 +4,7 @@ ERVcaller is a tool designed to accurately detect and genotype non-reference unf
 
 Complementary to ERVcaller, other bioinformatics tools designed to detect large deletions may be used to detect TEs that are present in the human reference genome but not in testing samples.
 
+
 **2 Installation**
 2.1 Extract the latest ERVcaller installer
 $ *tar vxzf ERVcaller_v.1.3.tar.gz*
@@ -27,6 +28,7 @@ $ *bwa index hg38.fa*
 2.3.2 TE reference genome. A TE reference is provided by the ERVcaller installer (i.e., the TE consensus sequences consisting of one Alu, LINE1, SVA, and HERV-K consensus sequence each; the human TE library containing 23 TE sequences; and the ERV library extracted from the Repbase database); or a user-defined TE reference library.  
 $ *cd user_installed_full_path/Database/*  
 $ *bwa index TE_consensus.fa*  
+
 
 **3 Running ERVcaller**  
 3.1 make the installed dependent tools available in the default search path  
@@ -79,6 +81,7 @@ Parameter (Full name)	Format	Description
 -h | help	-	Print this help  
 PS: with –G or –m, the input bam file need to be indexed using samtools.  
 
+
 **4 Output file**  
 4.1 Output for each sample  
 The output VCF file (VCFv4.2) will be generated after running. All annotations are listed below:  
@@ -107,6 +110,7 @@ $ *perl user_installed_path/Scripts/Combine_VCF_files.pl -l sample_list -c 1KGP.
 
 4.2.3 Combine multiple samples without providing a list of consensus TE loci  
 $ *perl user_installed_path/Scripts/Combine_VCF_files.pl -l sample_list >Output_merged.vcf*  
+
 
 **5 FAQ**  
 5.1 How to install dependent tools  
