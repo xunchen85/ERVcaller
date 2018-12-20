@@ -79,8 +79,8 @@ $ perl user_installed_path/ERVcaller_v.1.3.pl -i TE_seq -f .bam -H hg38.fa -T TE
 All available parameters are listed below. The following four parameters are required: input sample ID (-i), file suffix (-f), human reference genome (-H), and TE reference genomes (-T).  
 
 *List of parameters and their meanings*  
-Parameter (Full name)	Format	Description  
--i | input_sampleID	STRING	Sample ID (required)  
+Parameter (Full name)	Format	Description
+&lt;p&gt;-i&lt;/p&gt;| input_sampleID	STRING	Sample ID (required)  
 -f | file_suffix	STRING	The suffix of the input data: zipped FASTQ file (i.e., .fq.gz, and fastq.gz), unzipped FASTQ file (i.e., .fq, and fastq), BAM file(s) (i.e., .bam and .list) (required). Default: .bam  
 -H | Human_reference_genome	STRING	The FASTA file of the human reference genome (required)  
 -T | TE_reference_genomes	STRING	The TE library (FASTA) used for screening (required)  
