@@ -20,10 +20,14 @@ R-3.3.2 (or higher): https://www.r-project.org/
 SE_MEI (Modified version included in the Scripts folder of the ERVcaller installer)  
 
 2.3 Preparing the references  
-2.3.1 Human reference genome (hg38 by default. If BAM file(s) are used as input, the same build as the reference used for alignment should be used)  
+2.3.1 Human reference genome (hg38 by default. If BAM file(s) are used as input, the same build as the reference used for alignment should be used) 
+```
+$ npm install --save gray
+
 $ *wget http://hgdownload.soe.ucsc.edu/goldenPath/hg38/bigZips/hg38.fa.gz*  
 $ *gunzip hg38.fa.gz*  
 $ *bwa index hg38.fa*  
+```
 
 2.3.2 TE reference genome. A TE reference is provided by the ERVcaller installer (i.e., the TE consensus sequences consisting of one Alu, LINE1, SVA, and HERV-K consensus sequence each; the human TE library containing 23 TE sequences; and the ERV library extracted from the Repbase database); or a user-defined TE reference library.  
 $ *cd user_installed_full_path/Database/*  
