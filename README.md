@@ -8,7 +8,7 @@ Complementary to ERVcaller, other bioinformatics tools designed to detect large 
 **2 Installation**  
 2.1 Extract the latest ERVcaller installer  
 ```
-$ *tar vxzf ERVcaller_v.1.3.tar.gz*  
+$ tar vxzf ERVcaller_v.1.3.tar.gz  
 ```
 
 2.2 Installing dependent software  
@@ -24,55 +24,55 @@ SE_MEI (Modified version included in the Scripts folder of the ERVcaller install
 2.3 Preparing the references  
 2.3.1 Human reference genome (hg38 by default. If BAM file(s) are used as input, the same build as the reference used for alignment should be used) 
 ```
-$ *wget http://hgdownload.soe.ucsc.edu/goldenPath/hg38/bigZips/hg38.fa.gz*  
-$ *gunzip hg38.fa.gz*  
-$ *bwa index hg38.fa*  
+$ wget http://hgdownload.soe.ucsc.edu/goldenPath/hg38/bigZips/hg38.fa.gz  
+$ gunzip hg38.fa.gz  
+$ bwa index hg38.fa  
 ```
 
 2.3.2 TE reference genome. A TE reference is provided by the ERVcaller installer (i.e., the TE consensus sequences consisting of one Alu, LINE1, SVA, and HERV-K consensus sequence each; the human TE library containing 23 TE sequences; and the ERV library extracted from the Repbase database); or a user-defined TE reference library.  
 ```
-$ *cd user_installed_full_path/Database/*  
-$ *bwa index TE_consensus.fa*  
+$ cd user_installed_full_path/Database/  
+$ bwa index TE_consensus.fa  
 ```
 
 **3 Running ERVcaller**  
 3.1 make the installed dependent tools available in the default search path  
 ```
-$ *export PATH=$PATH:$home/bwa-master/*  
-$ *export PATH=$PATH:$home/samtools-1.6/*  
-$ *export PATH=$PATH:$home/bowtie2-2.2.7/*  
-$ *export PATH=$PATH:$home/SE-MEI/*  
-$ *export PATH=$PATH:$home/Hydra-Version-0.5.3/*  
-$ *export PATH=$PATH:$home/R/*  
+$ export PATH=$PATH:$home/bwa-master/  
+$ export PATH=$PATH:$home/samtools-1.6/  
+$ export PATH=$PATH:$home/bowtie2-2.2.7/  
+$ export PATH=$PATH:$home/SE-MEI/  
+$ export PATH=$PATH:$home/Hydra-Version-0.5.3/  
+$ export PATH=$PATH:$home/R/  
 ```
 
 3.2 Print help page  
 ```
-$ *perl user_installed_full_path/ERVcaller_v1.3.pl*  
+$ perl user_installed_full_path/ERVcaller_v1.3.pl  
 ```
 
 3.3 ERVcaller: running command line  
 ```
-$ *perl user_installed_path/ERVcaller_v1.3.pl -i sample_ID -f .bam -H hg38.fa -T TE_consensus.fa –S 20 -BWA_MEM –t No._threads*  
+$ perl user_installed_path/ERVcaller_v1.3.pl -i sample_ID -f .bam -H hg38.fa -T TE_consensus.fa –S 20 -BWA_MEM –t No._threads  
 ```
 
 3.3.1 Detecting TE insertions using a BAM file as input  
 ```
-$ *perl user_installed_path/ERVcaller_v.1.3.pl -i TE_seq -f .bam -H hg38.fa -T TE_consensus.fa -I folder_of_input_data -O folder_for_output_files -t 12 -S 20 -BWA_MEM*  
+$ perl user_installed_path/ERVcaller_v.1.3.pl -i TE_seq -f .bam -H hg38.fa -T TE_consensus.fa -I folder_of_input_data -O folder_for_output_files -t 12 -S 20 -BWA_MEM  
 ```
 
 3.3.2 Detecting TE insertions using paired-end FASTQ file as input  
 ```
-$ *perl user_installed_path/ERVcaller_v.1.3.pl -i TE_seq -f .fq.gz -H hg38.fa -T TE_consensus.fa -I folder_of_input_data -O folder_for_output_files -t 12 -S 20 -BWA_MEM*  
+$ perl user_installed_path/ERVcaller_v.1.3.pl -i TE_seq -f .fq.gz -H hg38.fa -T TE_consensus.fa -I folder_of_input_data -O folder_for_output_files -t 12 -S 20 -BWA_MEM  
 ```
 
 3.3.3 Detecting TE insertions using multiple BAM files as input  
 ```
-$ *perl user_installed_path/ERVcaller_v.1.3.pl -i TE_seq -f .list -H hg38.fa -T TE_consensus.fa -I folder_of_input_data -O folder_for_output_files -t 12 -S 20 -BWA_MEM -m*  
+$ perl user_installed_path/ERVcaller_v.1.3.pl -i TE_seq -f .list -H hg38.fa -T TE_consensus.fa -I folder_of_input_data -O folder_for_output_files -t 12 -S 20 -BWA_MEM -m  
 ```
 3.3.4 Detecting and genotyping TE insertions using a BAM file as input  
 ```
-$ *perl user_installed_path/ERVcaller_v.1.3.pl -i TE_seq -f .bam -H hg38.fa -T TE_consensus.fa -I folder_of_input_data -O folder_for_output_files -t 12 -S 20 -BWA_MEM -G*  
+$ perl user_installed_path/ERVcaller_v.1.3.pl -i TE_seq -f .bam -H hg38.fa -T TE_consensus.fa -I folder_of_input_data -O folder_for_output_files -t 12 -S 20 -BWA_MEM -G  
 ```
 
 3.4 Parameters  
@@ -125,12 +125,12 @@ The output VCF file (VCFv4.2) will be generated after running. All annotations a
 
 4.2.2 Combine multiple samples with providing a list of consensus TE loci  
 ```
-$ *perl user_installed_path/Scripts/Combine_VCF_files.pl -l sample_list -c 1KGP.TE.sites.vcf >Output_merged.vcf*  
+$ perl user_installed_path/Scripts/Combine_VCF_files.pl -l sample_list -c 1KGP.TE.sites.vcf >Output_merged.vcf  
 ```
 
 4.2.3 Combine multiple samples without providing a list of consensus TE loci  
 ```
-$ *perl user_installed_path/Scripts/Combine_VCF_files.pl -l sample_list >Output_merged.vcf*  
+$ perl user_installed_path/Scripts/Combine_VCF_files.pl -l sample_list >Output_merged.vcf  
 ```
 
 **5 FAQ**  
@@ -145,7 +145,7 @@ You can follow the links listed below for information about downloading and/or i
 5.2 How to set the shell environment variables for the installed dependent tools  
 	You can set temporary variables by using the Linux “export” command line before you run ERVcaller every time, or you can modify the shell profile file (ie. .bashrc) for longtime use. You should run for all tools above, except R which is mostly set when installed. For example:  
 ```
-$ *export PATH=$PATH:/home/Tools/samtools/*  
+$ export PATH=$PATH:/home/Tools/samtools/  
 ```
 
 5.3 Where to get the human reference genome  
