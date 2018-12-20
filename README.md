@@ -79,12 +79,12 @@ $ perl user_installed_path/ERVcaller_v.1.3.pl -i TE_seq -f .bam -H hg38.fa -T TE
 All available parameters are listed below. The following four parameters are required: input sample ID (-i), file suffix (-f), human reference genome (-H), and TE reference genomes (-T).  
 
 *List of parameters and their meanings*  
-Parameter&nbsp; &nbsp; &nbsp; &nbsp;(Full name)&nbsp; &nbsp; &nbsp; &nbsp;Format&nbsp; &nbsp; &nbsp; &nbsp;Description  
--i | input_sampleID	STRING&nbsp; &nbsp; &nbsp; &nbsp;Sample ID   
--f | file_suffix&nbsp; &nbsp; &nbsp; &nbsp;STRING&nbsp; &nbsp; &nbsp; &nbsp;The suffix of the input data: zipped FASTQ file (i.e., .fq.gz, and fastq.gz), unzipped FASTQ file (i.e., .fq, and fastq), BAM file(s) (i.e., .bam and .list) (required). Default: .bam  
--H | Human_reference_genome&nbsp; &nbsp; &nbsp; &nbsp;STRING&nbsp; &nbsp; &nbsp; &nbsp;The FASTA file of the human reference genome (required)  
--T | TE_reference_genomes&nbsp; &nbsp; &nbsp; &nbsp;STRING&nbsp; &nbsp; &nbsp; &nbsp;The TE library (FASTA) used for screening (required)  
--I | Input_directory&nbsp; &nbsp; &nbsp; &nbsp;STRING&nbsp; &nbsp; &nbsp; &nbsp;The folder of the input data. Default: Not specified (current working directory)  
+Parameter&emsp;(Full name)&emsp;Format&emsp;Description  
+-i | input_sampleID&emsp;STRING&emsp;Sample ID   
+-f | file_suffix&emsp;STRING&emsp;The suffix of the input data: zipped FASTQ file (i.e., .fq.gz, and fastq.gz), unzipped FASTQ file (i.e., .fq, and fastq), BAM file(s) (i.e., .bam and .list) (required). Default: .bam  
+-H | Human_reference_genome&emsp;STRING&emsp;The FASTA file of the human reference genome (required)  
+-T | TE_reference_genomes&emsp;STRING&emsp;The TE library (FASTA) used for screening (required)  
+-I | Input_directory&emsp;STRING&emsp;The folder of the input data. Default: Not specified (current working directory)  
 -O | Output_directory&nbsp; &nbsp; &nbsp; &nbsp;STRING&nbsp; &nbsp; &nbsp; &nbsp;The folder for the output files. Default: Not specified (current working directory)  
 -n | number_of_reads&nbsp; &nbsp; &nbsp; &nbsp;INTEGER&nbsp; &nbsp; &nbsp; &nbsp;The minimum number of reads support a TE insertion. Default: 3  
 -d | data_type&nbsp; &nbsp; &nbsp; &nbsp;STRING&nbsp; &nbsp; &nbsp; &nbsp;Data type, including WGS, and RNA-seq. Default: WGS  
