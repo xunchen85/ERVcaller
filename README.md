@@ -36,7 +36,7 @@ $ bwa index TE_consensus.fa
 ```
 
 **3 Running ERVcaller**  
-3.1 make the installed dependent tools available in the default search path  
+3.1 Make the installed dependent tools available in the default search path  
 ```
 $ export PATH=$PATH:$home/bwa-master/  
 $ export PATH=$PATH:$home/samtools-1.6/  
