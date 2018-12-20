@@ -118,7 +118,7 @@ You can follow the links listed below for information about downloading and/or i
 •	R: https://www.r-project.org/  
 
 ### How to set the shell environment variables for the installed dependent tools?  
-	You can set temporary variables by using the Linux “export” command line before you run ERVcaller every time, or you can modify the shell profile file (ie. .bashrc) for longtime use. You should run for all tools above, except R which is mostly set when installed. For example:  
+You can set temporary variables by using the Linux “export” command line before you run ERVcaller every time, or you can modify the shell profile file (ie. .bashrc) for longtime use. You should run for all tools above, except R which is mostly set when installed. For example:  
 ```
 $ export PATH=$PATH:/home/Tools/samtools/  
 ```
@@ -127,15 +127,15 @@ $ export PATH=$PATH:/home/Tools/samtools/
 You can download hg38 here: http://hgdownload.soe.ucsc.edu/goldenPath/hg38/bigZips/. It is recommended that the file hg38.fa.gz is downloaded and unzipped for reference indexing.  
 
 ### Can we use other TE references we collected ourselves?  
-	Yes, you can. You should be able to use any TE reference sequences specific to your research.  
-
+Yes, you can. You should be able to use any TE reference sequences specific to your research.  
+  
 ### Where can I find test data?  
-	You can find the test input data under the ERVcaller_v.1.3/test/ folder. There is example input data in both BAM and FASTQ format for testing.  
+You can find the test input data under the ERVcaller_v.1.3/test/ folder. There is example input data in both BAM and FASTQ format for testing.  
 There is also an example VCF output file in the folder: ERVcaller_v.1.3/test/example_output/  
- 
+  
 ### Where can I find more information about the output format?  
-	You can find the full information here: https://samtools.github.io/hts-specs/VCFv4.2.pdf.  
-
+You can find the full information here: https://samtools.github.io/hts-specs/VCFv4.2.pdf.  
+  
 ### Which parameters were used to produce the example test output file?  
 The following command line was used to produce the example file:  
 ```
@@ -143,7 +143,7 @@ $ perl ERVcaller_v.1.3.pl -i TE_seq -f .bam -H hg38.fa -T TE_consensus.fa -G
 ```
 
 ### How to speed up ERVcaller?  
-	You can use “-t <threads>” to use multi-thread computing. You can skip the genotyping function which can significantly speed up ERVcaller. You may also increase the length of split reads (-S <Split>) to reduce the number of split reads which potentially caused by sequencing errors.  
+You can use “-t <threads>” to use multi-thread computing. You can skip the genotyping function which can significantly speed up ERVcaller. You may also increase the length of split reads (-S <Split>) to reduce the number of split reads which potentially caused by sequencing errors.  
 
 ### Do we need to provide the full path to the human reference genome and ERV reference genome in the command line, even if they’re in the executable’s directory?    
 Yes.  
