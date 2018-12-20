@@ -145,9 +145,9 @@ $ perl ERVcaller_v.1.3.pl -i TE_seq -f .bam -H hg38.fa -T TE_consensus.fa -G
 5.8 How to speed up ERVcaller  
 	You can use “-t <threads>” to use multi-thread computing. You can skip the genotyping function which can significantly speed up ERVcaller. You may also increase the length of split reads (-S <Split>) to reduce the number of split reads which potentially caused by sequencing errors.  
 
-5.9 Do we need to provide the full path to the human reference genome and ERV reference genome in the command line, even if they’re in the executable’s directory?  
+5.9 Do we need to provide the full path to the human reference genome and ERV reference genome in the command line, even if they’re in the executable’s directory?    
 Yes.  
 
-5.10 Do we need to provide the full path to the ERVcaller in the command line?
+5.10 Do we need to provide the full path to the ERVcaller in the command line?  
 Yes.  
 
