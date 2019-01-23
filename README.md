@@ -152,16 +152,13 @@ Yes.
 Yes.  
 
 ## Copyright 
-```
 ERVcaller is licensed under the Creative Commons Attribution-NonCommercial 4.0 International license. It may be used for non-commercial use only. For inquiries about a commercial license, please contact the corresponding author at dawei.li@uvm.edu or The University of Vermont Innovations at innovate@uvm.edu.
-```
+
 
 ## Download
-```
 Download: www.uvm.edu/genomics/software/ERVcaller.html
-```
+
 
 ## Citation
-```
 Chen X and Li D. ERVcaller: Identifying and genotyping non-reference unfixed endogenous retroviruses (ERVs) and other transposable elements (TEs) using next-generation sequencing data. Manuscript in submission.
-```
+
