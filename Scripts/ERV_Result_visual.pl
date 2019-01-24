@@ -77,7 +77,7 @@ my @final_infor=();
 my @alignment_type=(0) x 4;
 
 ############################## print out title;
-print "Sample\tOrder\tAver_a\tAver_u\tU_virus\tU_vip\tUniq_gi\tChim\tChim_q\tSplit\tSplit_q\tT_vip\tT_hist\tT_gi\tString\tChr.\tH_start\tH_end\tVirus\tGi\tV_start\tV_end\t";
+print "Sample\tOrder\tAver_a\tAver_u\tU_TE\tU_vip\tUniq_gi\tChim\tChim_q\tSplit\tSplit_q\tT_vip\tT_hist\tT_gi\tString\tChr.\tH_start\tH_end\tTE\tID\tV_start\tV_end\t";
 print "Direction\tRead_name\tFlag\tChr.\tPosi.\t0\tMapping\tMate_hchr\tMate_hposi\t0\tAS\tV_flag\tV_posi.\t0\tMapping\tMate_vchr\tMate_vposi.\t0\tAS\tAS2\t0\t0\tAS3\tDirectory2\tStart_r\tEnd_r\tLength_r\tRE\tOverlap_RE\tType_h\tOverlap_h\n";
 
 while(<INPUT>){                        #0      each VIP

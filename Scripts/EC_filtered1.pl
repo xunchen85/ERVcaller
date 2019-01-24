@@ -64,5 +64,6 @@ while(<F1>){
 # if($as<50){next;}
 ################################
  my $virus_name="";
+  unless ($as) {$as=0;}
   print "$type1 @line[0..8] $posi $as\n";
 }
