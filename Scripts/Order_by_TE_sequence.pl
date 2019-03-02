@@ -56,7 +56,7 @@ while(<FILE>){
      elsif($virus_p[4] eq "7" || $virus_p[4] eq "NC_000007.13") {print C7 "@virus_p\n";}
      elsif($virus_p[4] eq "8" || $virus_p[4] eq "NC_000008.10") {print C8 "@virus_p\n";}
      elsif($virus_p[4] eq "9" || $virus_p[4] eq "NC_000009.11") {print C9 "@virus_p\n";}
-     elsif($virus_p[4] eq "10" || $virus_p[4] eq "NC_0000010.10") {print C10 "@virus_p\n";}
+     elsif($virus_p[4] eq "10" || $virus_p[4] eq "NC_000010.10") {print C10 "@virus_p\n";}
      elsif($virus_p[4] eq "11" || $virus_p[4] eq "NC_000011.9") {print C11 "@virus_p\n";}
      elsif($virus_p[4] eq "12" || $virus_p[4] eq "NC_000012.11") {print C12 "@virus_p\n";}
      elsif($virus_p[4] eq "13" || $virus_p[4] eq "NC_000013.10") {print C13 "@virus_p\n";}
