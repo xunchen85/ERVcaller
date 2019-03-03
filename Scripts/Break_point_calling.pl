@@ -8,10 +8,12 @@ my $position="test_sm.sam";
 my $te="test_vsu.sam";
 my $type="test.type";
 my $output="test";
+my $alignment_score=30;
 
 GetOptions('position=s'=>\$position,
            'te=s'=>\$te,
            'type=s'=>\$type,
+	   'alignment_score=s'=>\$alignment_score,
            'output=s'=>\$output);
 
 ################
@@ -52,7 +54,7 @@ while(<TE>){
   if($te[$i]=~s/MD:Z://){$md=$te[$i];}
   if($te[$i]=~s/AS:i://){$as=$te[$i];}
                           }
- if($as<22){next;}
+ if($as eq "NA" || $as<$alignment_score){next;}
  if(exists($type{$te[0]})){
   print OUT1 "$type{$te[0]} unknown $position{$te[0]} @te[1..8] $md $as\n";
                           }

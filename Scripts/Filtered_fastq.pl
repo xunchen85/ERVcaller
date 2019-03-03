@@ -17,7 +17,7 @@ while(<TYPE>){
 close TYPE;
 
 #################
-open INTEGRATION,"$ARGV[0].integration";
+open INTEGRATION,"$ARGV[0]_all_breakpoint";
 while(<INTEGRATION>){
  @line=split;
  if(exists($integration{$line[2]})){next;}

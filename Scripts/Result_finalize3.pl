@@ -125,7 +125,7 @@ XUN: if($line[1] =~ "End"){                             # organize results and p
                          }
       elsif($endd2>=$vip_list2[$dd][1] && $temp22[9]>=$vip_list2[$dd][0]){
        if($temp_name eq $temp22[1] && $temp_dis>$endd2-$vip_list2[$dd][1]){
-        @temp_array=();push(@temp_array,($vip_list2[$dd][0],$endd2));$temp_dis=$$endd2-$vip_list2[$dd][1];}
+        @temp_array=();push(@temp_array,($vip_list2[$dd][0],$endd2));$temp_dis=$endd2-$vip_list2[$dd][1];}
        if($temp_name ne $temp22[1] || $dd2+14 >= @temp11){
 #        print "temp2:\t@temp_array\n";
         @{$vip_list2[$dd]}=@temp_array;
@@ -136,7 +136,7 @@ XUN: if($line[1] =~ "End"){                             # organize results and p
                                                                         }
       elsif($endd2<=$vip_list2[$dd][1] && $temp22[9]<=$vip_list2[$dd][0]){
        if($temp_name eq $temp22[1] && $temp_dis>$endd2-$vip_list2[$dd][1]){
-        @temp_array=();push(@temp_array,($temp22[9],$vip_list2[$dd][1]));$temp_dis=$$endd2-$vip_list2[$dd][1];
+        @temp_array=();push(@temp_array,($temp22[9],$vip_list2[$dd][1]));$temp_dis=$endd2-$vip_list2[$dd][1];
                                                                           }
        elsif($temp_name ne $temp22[1] || $dd2+14 >= @temp11){
 #        print "temp3:\t@temp_array\n";
