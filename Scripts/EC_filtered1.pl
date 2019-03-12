@@ -31,11 +31,11 @@ while(<F1>){
 
 ###############
  for(my $i=11;$i<@line;$i++){
-  if($line[$i]=~"AS"){
+  if($line[$i]=~"AS:i:"){
    $as=$line[$i];
    $as=~s/AS\:i\://;
                      }
-  if($line[$i]=~"MD"){
+  if($line[$i]=~"MD:Z:"){
    $md=$line[$i];
    $md=~s/MD\:Z\://; 
                      }
