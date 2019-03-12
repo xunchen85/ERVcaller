@@ -6,6 +6,7 @@
 # Version:	v1.4
 #
 # Updates (v1.4):
+#	03/12/2019:		Corrected a bug caused by sample IDs contaning "AS" character
 #	02/15/2019:		Re-designed the genotyping process
 #	02/10/2019:		Added the scripts to distinguish missing genotypes and none TE insertions genotypes for all samples in the combined VCF file
 # 	02/06/2019:		Corrected the output coordinates of TE insertions with TSD
