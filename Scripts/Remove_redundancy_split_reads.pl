@@ -1,4 +1,5 @@
-#!use/bin/perl
+#!/use/bin/env perl
+
 use strict;
 my $line="";
 my @line=();

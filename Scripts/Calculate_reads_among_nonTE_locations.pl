@@ -1,4 +1,4 @@
-#!usr/bin/perl
+#!/usr/bin/env perl
 #
 # Author:       Xun Chen
 # Email:        Xun.Chen@uvm.edu

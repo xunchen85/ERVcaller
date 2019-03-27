@@ -1,4 +1,5 @@
-#!usr/bin/perl
+#!/usr/bin/env perl
+
 use strict;
 
 open F1,"$ARGV[0]";
