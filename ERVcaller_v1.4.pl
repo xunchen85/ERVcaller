@@ -6,6 +6,7 @@
 # Version:	v1.4
 #
 # Updates (v1.4):
+#	04/23/2019:		Corrected a bug caused the genotyping function error for the input of a list of BAM files.
 #	03/12/2019:		Corrected a bug caused by sample IDs contaning "AS" character
 #	02/15/2019:		Re-designed the genotyping process
 #	02/10/2019:		Added the scripts to distinguish missing genotypes and none TE insertions genotypes for all samples in the combined VCF file
@@ -893,8 +894,8 @@ if ($Genotype){
           }
         }
 	close LIST;
-        system ("sort ${input_sampleID}_${Chr}_${Position}_h.sort.sam | uniq |$cmd_1$name_tmp1$cmd_2 >>${input_sampleID}_h.sort.sam2");             ##### revised 02/14/2019
-        system ("rm ${input_sampleID}_${Chr}_${Position}_h.sort.sam");
+        system ("sort ${input_sampleID}_h.sort.sam | uniq |$cmd_1$name_tmp1$cmd_2 >>${input_sampleID}_h.sort.sam2");             ##### revised 02/14/2019; 04/23/2019
+        system ("rm ${input_sampleID}_h.sort.sam");
       } else {
         system ("${samtools_d}samtools view ${Input_directory}${input_sampleID}${file_suffix} ${Chr}:${position1}-${position2} | sort | uniq | $cmd_1$name_tmp1$cmd_2 >>${input_sampleID}_h.sort.sam2");                              ## 02/14/2019
       }
