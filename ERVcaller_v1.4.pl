@@ -2455,13 +2455,13 @@ sub prtUsa {
   print "\n\n";
   print "=====================================\nExamples for detecting ERV and other TE insertions:\n";
   print "# Detecting TE insertions with a BAM file as the input\n";
-  print "       perl $0 -i TE_seq.fa -f .bam -H hg38.fa -T TE_consensus.fa -I folder_of_input_data -O folder_for_output_files -t 12 -S 20 -BWA_MEM\n\n";
+  print "       perl $0 -i TE_seq -f .bam -H hg38.fa -T TE_consensus.fa -I folder_of_input_data -O folder_for_output_files -t 12 -S 20 -BWA_MEM\n\n";
   print "# Detecting TE insertions with paired-end FASTQ file as the input\n";
-  print "       perl $0 -i TE_seq.fa -f .fq.gz -H hg38.fa -T TE_consensus.fa -I folder_of_input_data -O folder_for_output_files -t 12 -S 20 -BWA_MEM\n\n";
+  print "       perl $0 -i TE_seq -f .fq.gz -H hg38.fa -T TE_consensus.fa -I folder_of_input_data -O folder_for_output_files -t 12 -S 20 -BWA_MEM\n\n";
   print "# Detecting TE insertions with separated BAM file(s) as the input\n";
-  print "       perl $0 -i TE_seq.fa -f .list -H hg38.fa -T TE_consensus.fa -I folder_of_input_data -O folder_for_output_files -t 12 -S 20 -BWA_MEM -m\n\n";
+  print "       perl $0 -i TE_seq -f .list -H hg38.fa -T TE_consensus.fa -I folder_of_input_data -O folder_for_output_files -t 12 -S 20 -BWA_MEM -m\n\n";
   print "# Detecting and genotyping TE insertions with a BAM file as the input\n";
-  print "       perl $0 -i TE_seq.fa -f .bam -H hg38.fa -T TE_consensus.fa -I folder_of_input_data -O folder_for_output_files -t 12 -S 20 -BWA_MEM -G\n\n\n";
+  print "       perl $0 -i TE_seq -f .bam -H hg38.fa -T TE_consensus.fa -I folder_of_input_data -O folder_for_output_files -t 12 -S 20 -BWA_MEM -G\n\n\n";
 }
 
 ##### print out error info
