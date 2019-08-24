@@ -100,12 +100,12 @@ chr1    5617379 .       T       <INS_MEI:HERV>  .       .       TSD=NULL,NULL;IN
 
 #### Combine multiple samples with providing a list of consensus TE loci  
 ```
-$ perl user_installed_path/Scripts/Combine_VCF_files.pl -l sample_list -c 1KGP.TE.sites.vcf >Output_merged.vcf  
+$ perl user_installed_path/Scripts/Combine_VCF_files.pl -l sample_list -c 1KGP.TE.sites.vcf -o Output_merged.vcf  
 ```
 
 #### Combine multiple samples without providing a list of consensus TE loci  
 ```
-$ perl user_installed_path/Scripts/Combine_VCF_files.pl -l sample_list >Output_merged.vcf  
+$ perl user_installed_path/Scripts/Combine_VCF_files.pl -l sample_list -o Output_merged.vcf  
 ```
 
 #### Calculate the number of reads support non-insertions at the consensus TE loci per sample (It is recommended to filter out low-quality TE loci from the combined VCF file first before running this script)
