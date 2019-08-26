@@ -1,6 +1,8 @@
-#!usr/bin/perl -w
+#!/usr/bin/env perl
 
 use strict;
+use warnings;
+
 my %file=();
 my $b1="";
 my $read_name="";

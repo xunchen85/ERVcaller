@@ -1,4 +1,5 @@
-#!usr/bin/perl -w
+#!/usr/bin/env perl
+
 # This script is to find another end of reads to form PE reads;
 # Usage: perl Fastq_PE_format.pl -sample sample
 #author: Xun Chen
