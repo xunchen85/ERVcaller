@@ -6,8 +6,8 @@
 # Version:	v1.4
 #
 # Updates (v1.4):
-#	04/23/2019:		Corrected a bug caused the genotyping function error for the input of a list of BAM files.
-#	03/12/2019:		Corrected a bug caused by sample IDs contaning "AS" character
+#	04/23/2019:		Corrected a bug of the genotyping function with the input of a list of BAM files
+#	03/12/2019:		Corrected a bug caused by the sample IDs containing the "AS" character
 #	02/15/2019:		Re-designed the genotyping process
 #	02/10/2019:		Added the scripts to distinguish missing genotypes and none TE insertions genotypes for all samples in the combined VCF file
 # 	02/06/2019:		Corrected the output coordinates of TE insertions with TSD
