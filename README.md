@@ -38,7 +38,6 @@ $ export PATH=$PATH:$home/bwa-master/
 $ export PATH=$PATH:$home/samtools-1.6/  
 $ export PATH=$PATH:$home/bowtie2-2.2.7/  
 $ export PATH=$PATH:$home/SE-MEI/  
-$ export PATH=$PATH:$home/Hydra-Version-0.5.3/  
 $ export PATH=$PATH:$home/R/  
 ```
 
@@ -125,7 +124,6 @@ You can follow the links listed below for information about downloading and/or i
 •	BWA-0.7.10: http://bio-bwa.sourceforge.net/bwa.shtml  
 •	Bowtie2: http://bowtie-bio.sourceforge.net/bowtie2/manual.shtml  
 •	Samtools-1.6 (or later than 1.2): http://www.htslib.org/doc/samtools.html  
-•	Hydra-0.5.3: http://www.mybiosoftware.com/hydra-0-5-3-structural-variation-discovery-paired-end-mapping.html  
 •	R: https://www.r-project.org/  
 
 ### How to set the shell environment variables for the installed dependent tools?  
