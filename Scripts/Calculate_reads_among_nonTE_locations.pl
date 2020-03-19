@@ -59,7 +59,7 @@ if (defined ($L_std_insertsize)) {
 
 ##### estimate insertsize
 if (!(defined ($length_insertsize)) || !(defined ($L_std_insertsize))) {
-  ($length_insertsize,$std_insertsize) = estimate_insertsize($bamFile,${input},0.05);
+  ($length_insertsize,$std_insertsize) = estimate_insertsize($bamFile,${Sample_ID},0.05);
 }
 my $min_insertsize = $length_insertsize - 2 * $std_insertsize;
 
