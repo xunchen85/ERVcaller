@@ -160,6 +160,9 @@ Yes.
 ### Do we need to provide the full path to the ERVcaller in the command line?  
 Yes.  
 
+### Do we need to exclude called TE insertions within the same reference TEs?  
+It depends on your research. By removing the potential nested TEs, the accuracy will be significantly increased.    
+
 ## Copyright 
 ERVcaller is licensed under the Creative Commons Attribution-NonCommercial 4.0 International license. It may be used for non-commercial use only. For inquiries about a commercial license, please contact the corresponding author at dawei.li@uvm.edu or The University of Vermont Innovations at innovate@uvm.edu.
 
