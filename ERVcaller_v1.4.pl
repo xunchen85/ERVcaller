@@ -1,8 +1,8 @@
 #!/usr/bin/env perl
 #
 # Author: 	Xun Chen
-# Email: 	Xun.Chen@uvm.edu
-# Date:		02/21/19
+# Email: 	xunchen85@gmail.com
+# Date:		08/05/2020
 # Version:	v1.4
 #
 # Updates (v1.4):
