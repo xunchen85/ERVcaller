@@ -172,5 +172,5 @@ Download: www.uvm.edu/genomics/software/ERVcaller.html
 
 
 ## Citation
-Chen X and Li D. ERVcaller: Identifying and genotyping non-reference unfixed endogenous retroviruses (ERVs) and other transposable elements (TEs) using next-generation sequencing data. Manuscript in submission.
+Chen X and Li D. ERVcaller: Identifying and genotyping non-reference unfixed endogenous retroviruses (ERVs) and other transposable elements (TEs) using next-generation sequencing data. https://academic.oup.com/bioinformatics/article/35/20/3913/5416145.
 
