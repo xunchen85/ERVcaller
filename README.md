@@ -163,6 +163,9 @@ Yes.
 ### Do we need to exclude called TE insertions within the same reference TEs?  
 It depends on your research. By removing the potential nested TEs, the accuracy will be significantly increased.    
 
+### Any filtering steps suggested to keep the confident TE insertions after you obtain the output?  
+You can filter out TE insertions within the same reference TEs and filter out the TE loci with a low genotype quality (e.g., GQ < 10) 
+
 ## Copyright 
 ERVcaller is licensed under the Creative Commons Attribution-NonCommercial 4.0 International license. It may be used for non-commercial use only. For inquiries about a commercial license, please contact the corresponding author at dawei.li@uvm.edu or The University of Vermont Innovations at innovate@uvm.edu.
 
