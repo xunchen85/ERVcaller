@@ -11,6 +11,7 @@ $ tar vxzf ERVcaller_v.1.4.tar.gz
 
 ### Installing dependent software  
 Users need to successfully install the following software separately and make them available in the default search path (such as by using the Linux command “export” or adding them to your .bashrc).
+
 •	BWA-0.7.10: http://bio-bwa.sourceforge.net/bwa.shtml  
 •	Bowtie2: http://bowtie-bio.sourceforge.net/bowtie2/manual.shtml  
 •	Samtools-1.6 (or later than 1.2): http://www.htslib.org/doc/samtools.html  
