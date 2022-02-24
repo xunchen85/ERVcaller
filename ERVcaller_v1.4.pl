@@ -2,11 +2,11 @@
 #
 # Author: 	Xun Chen
 # Email: 	xunchen85@gmail.com
-# Date:		08/05/2020
+# Date:		02/24/2022
 # Version:	v1.4
 #
 # Updates (v1.4):
-#       02/24/2022:             Added the Filtering_VCF_v1.4.pl script for filtering out low quality candidate TE insertions
+#       02/24/2022:             Added the Filtering_VCF_v1.4.pl script for filtering out low-quality candidate TE insertions
 #	04/23/2019:		Corrected a bug of the genotyping function with the input of a list of BAM files
 #	03/12/2019:		Corrected a bug caused by the sample IDs containing the "AS" character
 #	02/15/2019:		Re-designed the genotyping process
