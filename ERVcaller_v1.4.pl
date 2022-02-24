@@ -49,7 +49,6 @@ use Getopt::Long qw(:config no_ignore_case);
 use strict;
 use warnings;
 use Cwd qw();
-my $bowtie2_d="";
 my $tophat_d="";
 my $bwa_d="";
 my $samtools_d="";
@@ -59,7 +58,6 @@ my $SE_MEI_d="";
 # $bwa_d="/ERVcaller/Tools/bwa-master/";
 # $samtools_d="/ERVcaller/Tools/samtools-1.6/";
 # $tophat_d="/ERVcaller/Tools/tophat-2.1.1.Linux_x86_64/";
-# $bowtie2_d="/ERVcaller/Tools/bowtie2-2.2.7/";
 # $SE_MEI_d="/ERVcaller/Tools/SE-MEI/";
  
 # Parameter variables;
