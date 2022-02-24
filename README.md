@@ -168,7 +168,7 @@ Yes, we include the TE insertions even within the same type of reference TE sequ
 To keep high qualitly TE insertions, it is important to filter out TE insertions within the same reference TEs using BEDtools and filter out the TE loci with a low genotype quality (e.g., GQ < 10) 
 
 ## Copyright 
-ERVcaller is licensed under the Creative Commons Attribution-NonCommercial 4.0 International license. It may be used for non-commercial use only. For inquiries about a commercial license, please contact the corresponding author at dawei.li@uvm.edu or The University of Vermont Innovations at innovate@uvm.edu.
+ERVcaller is licensed under the Creative Commons Attribution-NonCommercial 4.0 International license. It may be used for non-commercial use only. For inquiries about a commercial license, please contact the first or the corresponding author or The University of Vermont Innovations.
 
 
 ## Download
