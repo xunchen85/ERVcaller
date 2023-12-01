@@ -5,7 +5,7 @@ Complementary to ERVcaller, other bioinformatics tools designed to detect large 
 
 We have also published a book character which provided a step-by-step guide on using ERVcaller and other tools to characterize polymorphic TE insertions in human populations.
 
-Xun Chen, Guillaume Bourque, and Clement Goubert (2023): Genotyping of Transposable Element Insertions Segregating in Human Populations Using Short-Read Realignments, Transposable Elements: Methods and Protocols, Methods in Molecular Biology, vol. 2607, https://doi.org/10.1007/978-1-0716-2883-6_4
+•	Xun Chen, Guillaume Bourque, and Clement Goubert (2023): Genotyping of Transposable Element Insertions Segregating in Human Populations Using Short-Read Realignments, Transposable Elements: Methods and Protocols, Methods in Molecular Biology, vol. 2607, https://doi.org/10.1007/978-1-0716-2883-6_4
 
 ## Installation  
 ### Extract the latest ERVcaller installer  
