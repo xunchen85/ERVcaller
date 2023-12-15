@@ -53,15 +53,15 @@ while(<FILE>){
   @virus_p=split;
 #     $virus_p[4]=~s/Chr//;
 #     $virus_p[4]=~s/chr//;
-     if($virus_p[4] eq "chr1" || $virus_p[4] eq "Chr1" || $virus_p[4] eq "1" || $virus_p[4] eq "NC_000001.10") {print C1 "@virus_p\n";}
-     elsif($virus_p[4] eq "chr2" || $virus_p[4] eq "Chr2" || $virus_p[4] eq "2" || $virus_p[4] eq "NC_000002.11") {print C2 "@virus_p\n";}
-     elsif($virus_p[4] eq "chr3" || $virus_p[4] eq "Chr3" || $virus_p[4] eq "3" || $virus_p[4] eq "NC_000003.11") {print C3 "@virus_p\n";}
-     elsif($virus_p[4] eq "chr4" || $virus_p[4] eq "Chr4" || $virus_p[4] eq "4" || $virus_p[4] eq "NC_000004.11") {print C4 "@virus_p\n";}
-     elsif($virus_p[4] eq "chr5" || $virus_p[4] eq "Chr5" || $virus_p[4] eq "5" || $virus_p[4] eq "NC_000005.9") {print C5 "@virus_p\n";}
-     elsif($virus_p[4] eq "chr6" || $virus_p[4] eq "Chr6" || $virus_p[4] eq "6" || $virus_p[4] eq "NC_000006.11") {print C6 "@virus_p\n";}
-     elsif($virus_p[4] eq "chr7" || $virus_p[4] eq "Chr7" || $virus_p[4] eq "7" || $virus_p[4] eq "NC_000007.13") {print C7 "@virus_p\n";}
-     elsif($virus_p[4] eq "chr8" || $virus_p[4] eq "Chr8" || $virus_p[4] eq "8" || $virus_p[4] eq "NC_000008.10") {print C8 "@virus_p\n";}
-     elsif($virus_p[4] eq "chr9" || $virus_p[4] eq "Chr9" || $virus_p[4] eq "9" || $virus_p[4] eq "NC_000009.11") {print C9 "@virus_p\n";}
+     if($virus_p[4] eq "chr1" || $virus_p[4] eq "chr01" || $virus_p[4] eq "Chr1" || $virus_p[4] eq "1" || $virus_p[4] eq "NC_000001.10") {print C1 "@virus_p\n";}
+     elsif($virus_p[4] eq "chr2" || $virus_p[4] eq "chr02" || $virus_p[4] eq "Chr2" || $virus_p[4] eq "2" || $virus_p[4] eq "NC_000002.11") {print C2 "@virus_p\n";}
+     elsif($virus_p[4] eq "chr3" || $virus_p[4] eq "chr03" || $virus_p[4] eq "Chr3" || $virus_p[4] eq "3" || $virus_p[4] eq "NC_000003.11") {print C3 "@virus_p\n";}
+     elsif($virus_p[4] eq "chr4" || $virus_p[4] eq "chr04" || $virus_p[4] eq "Chr4" || $virus_p[4] eq "4" || $virus_p[4] eq "NC_000004.11") {print C4 "@virus_p\n";}
+     elsif($virus_p[4] eq "chr5" || $virus_p[4] eq "chr05" || $virus_p[4] eq "Chr5" || $virus_p[4] eq "5" || $virus_p[4] eq "NC_000005.9") {print C5 "@virus_p\n";}
+     elsif($virus_p[4] eq "chr6" || $virus_p[4] eq "chr06" || $virus_p[4] eq "Chr6" || $virus_p[4] eq "6" || $virus_p[4] eq "NC_000006.11") {print C6 "@virus_p\n";}
+     elsif($virus_p[4] eq "chr7" || $virus_p[4] eq "chr07" || $virus_p[4] eq "Chr7" || $virus_p[4] eq "7" || $virus_p[4] eq "NC_000007.13") {print C7 "@virus_p\n";}
+     elsif($virus_p[4] eq "chr8" || $virus_p[4] eq "chr08" || $virus_p[4] eq "Chr8" || $virus_p[4] eq "8" || $virus_p[4] eq "NC_000008.10") {print C8 "@virus_p\n";}
+     elsif($virus_p[4] eq "chr9" || $virus_p[4] eq "chr09" || $virus_p[4] eq "Chr9" || $virus_p[4] eq "9" || $virus_p[4] eq "NC_000009.11") {print C9 "@virus_p\n";}
      elsif($virus_p[4] eq "chr10" || $virus_p[4] eq "Chr10" || $virus_p[4] eq "10" || $virus_p[4] eq "NC_000010.10") {print C10 "@virus_p\n";}
      elsif($virus_p[4] eq "chr11" || $virus_p[4] eq "Chr11" || $virus_p[4] eq "11" || $virus_p[4] eq "NC_000011.9") {print C11 "@virus_p\n";}
      elsif($virus_p[4] eq "chr12" || $virus_p[4] eq "Chr12" || $virus_p[4] eq "12" || $virus_p[4] eq "NC_000012.11") {print C12 "@virus_p\n";}
