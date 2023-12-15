@@ -40,6 +40,10 @@ open C19, "+>${input}_19";
 open C20, "+>${input}_20";
 open C21, "+>${input}_21";
 open C22, "+>${input}_22";
+open C23, "+>${input}_23";
+open C24, "+>${input}_24";
+open C25, "+>${input}_25";
+open C26, "+>${input}_26";
 open CX, "+>${input}_X";
 open CY, "+>${input}_Y";
 open CMT, "+>${input}_MT";
@@ -71,6 +75,10 @@ while(<FILE>){
      elsif($virus_p[4] eq "chr20" || $virus_p[4] eq "Chr20" || $virus_p[4] eq "20" || $virus_p[4] eq "NC_000020.10") {print C20 "@virus_p\n";}
      elsif($virus_p[4] eq "chr21" || $virus_p[4] eq "Chr21" || $virus_p[4] eq "21" || $virus_p[4] eq "NC_000021.8") {print C21 "@virus_p\n";}
      elsif($virus_p[4] eq "chr22" || $virus_p[4] eq "Chr22" || $virus_p[4] eq "22" || $virus_p[4] eq "NC_000022.10") {print C22 "@virus_p\n";}
+     elsif($virus_p[4] eq "chr23" || $virus_p[4] eq "Chr23" || $virus_p[4] eq "23") {print C23 "@virus_p\n";}
+     elsif($virus_p[4] eq "chr24" || $virus_p[4] eq "Chr24" || $virus_p[4] eq "24") {print C24 "@virus_p\n";}
+     elsif($virus_p[4] eq "chr25" || $virus_p[4] eq "Chr25" || $virus_p[4] eq "25") {print C25 "@virus_p\n";}
+     elsif($virus_p[4] eq "chr26" || $virus_p[4] eq "Chr26" || $virus_p[4] eq "26") {print C26 "@virus_p\n";}
      elsif($virus_p[4] eq "chrX" || $virus_p[4] eq "ChrX" || $virus_p[4] eq "X" || $virus_p[4] eq "NC_000023.10")  {print CX "@virus_p\n";}
      elsif($virus_p[4] eq "chrY" || $virus_p[4] eq "ChrY" || $virus_p[4] eq "Y" || $virus_p[4] eq "NC_000024.9")  {print CY "@virus_p\n";}
      elsif($virus_p[4] eq "chrMT" || $virus_p[4] eq "ChrMT" || $virus_p[4] eq "MT" || $virus_p[4] eq "NC_012920.1") {print CMT "@virus_p\n";}
@@ -230,6 +238,34 @@ while(<FILE>){
    @order=sort{$can{$a}->[5]<=>$can{$b}->[5]} keys %can;
    for (my $i=0;$i<@order;$i++){print OUT "@{$can{$order[$i]}}\n";}
 
+   seek(C23,0,0);
+   $k=0;
+   %can=();
+   while(<C23>){my @line=split;@{$can{$k}}=@line;$k++;}
+   @order=sort{$can{$a}->[5]<=>$can{$b}->[5]} keys %can;
+   for (my $i=0;$i<@order;$i++){print OUT "@{$can{$order[$i]}}\n";}
+
+   seek(C24,0,0);
+   $k=0;
+   %can=();
+   while(<C24>){my @line=split;@{$can{$k}}=@line;$k++;}
+   @order=sort{$can{$a}->[5]<=>$can{$b}->[5]} keys %can;
+   for (my $i=0;$i<@order;$i++){print OUT "@{$can{$order[$i]}}\n";}
+   
+   seek(C25,0,0);
+   $k=0;
+   %can=();
+   while(<C25>){my @line=split;@{$can{$k}}=@line;$k++;}
+   @order=sort{$can{$a}->[5]<=>$can{$b}->[5]} keys %can;
+   for (my $i=0;$i<@order;$i++){print OUT "@{$can{$order[$i]}}\n";}
+   
+   seek(C26,0,0);
+   $k=0;
+   %can=();
+   while(<C26>){my @line=split;@{$can{$k}}=@line;$k++;}
+   @order=sort{$can{$a}->[5]<=>$can{$b}->[5]} keys %can;
+   for (my $i=0;$i<@order;$i++){print OUT "@{$can{$order[$i]}}\n";}
+   
    seek(CX,0,0);
    $k=0;
    %can=();
