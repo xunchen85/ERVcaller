@@ -417,8 +417,39 @@ sub create_consensus_loci {
           my $tmp1_name = $chr[$i]."|".$tmp3_sort[$j];
           my $tmp1_type = join(";",@{$location_type{$tmp1_name}});
           $region[3] = $region[3].";".$tmp1_type;
+	  if ($j == $#tmp3_sort) {                 #### corrected on 01/04/2024
+            ##### location
+            my @tmp2_location = split /\;/, $region[2];
+            @tmp2_location = sort(@tmp2_location);
+            my $tmp2_location_sort = "";
+            if (@tmp2_location) {
+              $tmp2_location_sort = $tmp2_location[0];
+            } 
+            for (my $k = 1; $k < @tmp2_location; $k++) {
+              if ($tmp2_location[$k] eq $tmp2_location[$k-1]) {
+                next;
+              } else {
+                $tmp2_location_sort = $tmp2_location_sort.";".$tmp2_location[$k];
+              } 
+            } 
+          
+            ##### type
+            my @tmp2_type = split /\;/, $region[3];
+            @tmp2_type = sort(@tmp2_type);
+            my $tmp2_type_sort = "";
+            if (@tmp2_type) {
+              $tmp2_type_sort = $tmp2_type[0];
+            } 
+            for (my $k = 1; $k < @tmp2_type; $k++) {
+              if ($tmp2_type[$k] eq $tmp2_type[$k-1]) {
+                next;
+              } else {
+                $tmp2_type_sort = $tmp2_type_sort.";".$tmp2_type[$k];
+              } 
+            } 
+            print CONSENSUS "$chr[$i]\t$region[0]\t$region[1]\t$tmp2_location_sort\t$tmp2_type_sort\n";
+	  }
         } else {
-
           ##### location
           my @tmp2_location = split /\;/, $region[2];
 	  @tmp2_location = sort(@tmp2_location);
@@ -464,6 +495,9 @@ sub create_consensus_loci {
         my $tmp1_name = $chr[$i]."|".$tmp3_sort[$j];
         my $tmp1_type = join(";",@{$location_type{$tmp1_name}});
         $region[3] = $tmp1_type;
+	if ($#tmp3_sort == 0) {                   #### corrected on 01/04/2024
+          print CONSENSUS "$chr[$i]\t$region[0]\t$region[1]\t$region[2]\t$region[3]\n";
+	}
       }
     }
   }
