@@ -6,6 +6,7 @@
 # Version:	v1.4
 #
 # Updates (v1.4):
+#	01/04/2024:		Corrected two bugs of the combining VCF function in the Combine_VCF_files.pl, which led to some missing TE loci in the combined VCF file (i.e., the last or a single TE locus per chromosome)
 #       02/24/2022:             Added the Filtering_VCF_v1.4.pl script for filtering out low-quality candidate TE insertions
 #	04/23/2019:		Corrected a bug of the genotyping function with the input of a list of BAM files
 #	03/12/2019:		Corrected a bug caused by the sample IDs containing the "AS" character
