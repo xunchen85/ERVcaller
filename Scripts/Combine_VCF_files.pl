@@ -487,6 +487,9 @@ sub create_consensus_loci {
           my $tmp1_name = $chr[$i]."|".$tmp3_sort[$j];
           my $tmp1_type = join(";",@{$location_type{$tmp1_name}});
           $region[3] = $tmp1_type;
+	  if ($j == $#tmp3_sort) {                #### corrected on 01/10/2014
+            print CONSENSUS "$chr[$i]\t$region[0]\t$region[1]\t$region[2]\t$region[3]\n";
+          }
         }
       } else {
         $region[0] = $tmp3_sort[$j];
